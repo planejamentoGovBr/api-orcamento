@@ -40,6 +40,7 @@ $prefLabel, $altLabel, $title and $name variables.
             <div id="barra-brasil">
                 <a href="http://brasil.gov.br" style="background:black; height: 20px; padding:4px 0 4px 10px; display: block; font-family:sans,sans-serif; text-decoration:none; color:white; ">Portal do Governo Brasileiro</a>
             </div>
+            <script type="text/javascript" src="http://barra.brasil.gov.br/barra.js?cor=preta"></script>
 			<div id="page">
 				<xsl:apply-templates select="." mode="header" />
 				<xsl:apply-templates select="." mode="content" />
@@ -94,7 +95,6 @@ $prefLabel, $altLabel, $title and $name variables.
 		<script type="text/javascript"
      src="http://openspace.ordnancesurvey.co.uk/osmapapi/openspace.js?key={$openSpaceAPIkey}"></script>
 	</xsl:if>
-    <script type="text/javascript" src="http://barra.brasil.gov.br/barra.js?cor=preta"></script>
 	<script type="text/javascript" src="{$_resourceRoot}scripts/jquery.min.js"></script>
 	<script type="text/javascript" src="{$_resourceRoot}scripts/jquery-ui.min.js"></script>
 	<script type="text/javascript" src="{$_resourceRoot}scripts/jquery.sparkline.js"></script>
