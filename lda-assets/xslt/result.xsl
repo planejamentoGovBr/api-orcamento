@@ -311,7 +311,7 @@ $prefLabel, $altLabel, $title and $name variables.
 		<xsl:apply-templates select="." mode="formats" />
 	</nav>
 	<header>
-		<h1><a href="/">Linked Data API</a></h1>
+		<h1><a href="/">orcamento.dados.gov.br</a></h1>
 	</header>
 </xsl:template>
 
