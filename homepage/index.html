@@ -1,0 +1,134 @@
+<html>
+<head>
+
+<base href="http://orcamento.dados.gov.br/">
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>orcamento.dados.gov.br</title>
+<link type="image/x-icon"
+	href="http://dados.gov.br/img/dadosgovbr.ico"
+	rel="shortcut icon">
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<link type="text/css"
+	href="/elda/lda-assets/css/html5reset-1.6.1.css"
+	rel="stylesheet">
+<link type="text/css"
+	href="/elda/lda-assets/css/smoothness/jquery-ui.css"
+	rel="stylesheet">
+<link type="text/css"
+	href="/elda/lda-assets/css/result.css"
+	rel="stylesheet">
+<!--[if lt IE 9]><link rel="stylesheet" href="/lda-assets/css/ie.css" type="text/css"></link><![endif]-->
+
+<style type="text/css">
+#result {
+	width: 80%
+}
+
+.panel section {
+	width: 94%;
+}
+
+.panel section caption {
+	color: #555555;
+	font-weight: normal;
+	text-align: left;
+}
+
+section p {
+	margin-top: 0em;
+	margin-bottom: 1.5em;
+}
+</style>
+</head>
+<body>
+	<div id="page">
+		<nav class="site"></nav>
+		<header>
+			<h1><a href="/">orcamento.dados.gov.br</a></h1>
+		</header>
+		<div id="result">
+			<div class="panel">
+				<header>Bem vindo ao orcamento.dados.gov.br</h2>
+				</header>
+				<section>
+					<p>
+						education.data.gov.uk contains a snapshot of <a
+							href="http://www.education.gov.uk/edubase">Edubase</a> taken in
+						2009 and published as linked data.
+					</p>
+					<p>
+						The best place to start exploring the data is <a
+							href="http://education.data.gov.uk/id/school">http://education.data.gov.uk/id/school</a>
+						which return a page listing schools within the dataset.
+					</p>
+					<p>
+						A list of the URI patterns supported by this site can be found <a
+							href="/api-config">here</a>. A few samples along with
+						descriptions are given below:
+					</p>
+					<table>
+						<colgroup>
+							<col width="25%">
+							<col width="*">
+						</colgroup>
+						<tr>
+							<th>URI</th>
+							<th>Description</th>
+						</tr>
+						<tbody>
+							<tr>
+								<td><a href="http://education.data.gov.uk/doc/school">http://education.data.gov.uk/doc/school</a></td>
+								<td>lists schools within the dataset.</td>
+							</tr>					
+                            <tr>
+                                <td><a href="http://education.data.gov.uk/doc/school?_view=location">http://education.data.gov.uk/doc/school?_view=location</a></td>
+                                <td>lists schools within the dataset, showing their position on a map.</td>
+                            </tr>
+							<tr>
+								<td><a
+									href="http://education.data.gov.uk/doc/school/phase/primary?districtAdministrative.label=Bristol, City of">http://education.data.gov.uk/doc/schoo/phase/primary?districtAdministrative.label=Bristol,
+										City of</a></td>
+								<td>lists primary schools associated within the
+									administrative district known as "Bristol, City of"</td>
+							</tr>
+                            <tr>
+                                <td><a
+                                    href="http://education.data.gov.uk/doc/school/phase/secondary?gender.label=Mixed">http://education.data.gov.uk/doc/school/phase/secondary?gender.label=Mixed</a></td>
+                                <td>lists mixed secondary schools</td>
+                            </tr>
+                            <tr>
+                                <td><a
+                                    href="http://education.data.gov.uk/def/school/Gender_TERM/instance">http://education.data.gov.uk/def/school/Gender_TERM/instance</a></td>
+                                <td>list the gender terms used in the dataset</td>
+                            </tr>
+                            <tr>
+                                <td><a
+                                    href="http://education.data.gov.uk/def/school/School/property.html?_pageSize=50">http://education.data.gov.uk/def/school/School/property.html?_pageSize=50</a></td>
+                                <td>lists the properties used in the dataset to describe schools. The list is paged with 50 properties per page.</td>
+                            </tr>
+                            <tr>
+                                <td><a
+                                    href="http://education.data.gov.uk/def/school?_pageSize=50">http://education.data.gov.uk/def/school?_pageSize=50</a></td>
+                                <td>lists the defined classes and properties used to describe schools in the dataset. The list is paged with 50 properties per page.</td>
+                            </tr>
+						</tbody>
+					</table>
+				</section>
+				<section class="nested">
+					<header>
+						<h2>Other Resources</h2>
+					</header>
+					<ul>
+				        <li><a href="http://data.gov.uk/blog/using-sparql-our-education-datasets">Leigh Dodds blog post</a> describing how to make SPARQL queries into the Edubase linked data.</li>
+				        <li>A <a href="http://education.data.gov.uk/sparql/education/query.html ">form</a> where you can try out SPARQL queries with this dataset.</li>
+				        <li>The <a href="http://jena.apache.org/">Apache Jena</a> project <a href="http://jena.apache.org/tutorials/sparql.html">SPARQL Tutorial</a></li>
+				        <li>Other <a href="http://data.gov.uk/linked-data">data.gov.uk linked data resources</a></li>
+				    </ul>
+				</section>
+			</div>
+		</div>
+		<footer></footer>
+	</div>
+</body>
+</html>
