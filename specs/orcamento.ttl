@@ -1,0 +1,179 @@
+#
+# Arquivo de configuracao para o orcamento.dados.gov.br. 
+#
+
+# Assorted prefix declarations. Some of them are for the structuring
+# of the API config, others are for the vocabulary definitions.
+#
+
+@prefix spec:               <http://orcamento.dados.gov.br/api-config#> .
+@prefix api:                <http://purl.org/linked-data/api/vocab#> .
+@prefix dct:	        	<http://purl.org/dc/terms/> .
+
+@prefix rdf:                <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:               <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:                <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl:                <http://www.w3.org/2002/07/owl#> .
+
+# The elda namespace/prefix is for Elda extensions to the LDA specification.
+@prefix elda:               <http://www.epimorphics.com/vocabularies/lda#> .
+
+# Prefix for example-local entities.
+@prefix loa-i:	            <http://orcamento.dados.gov.br/elda/id/> .
+@prefix loa:                <http://vocab.e.gov.br/2012/08/loa2012#> .
+# ---------------------------------------------------------------------
+# API config
+
+############################################################################################
+#
+# COMPONENTS
+#
+############################################################################################
+
+# SELECTORS
+
+spec:seletor_acao
+    a api:Selector;
+    api:filter "type=Acao" ;
+    api:sort "label" .
+
+#VIEWERS
+
+spec:viewerShort
+    a api:Viewer ;
+    api:name "short" ;
+    api:properties "label,loa_codigo" .
+
+############################################################################################
+#
+# API DESCRIPTION
+#
+############################################################################################
+
+spec:api a api:API                           
+        ; rdfs:label "Linked Data API do Orçamento"@pt
+        ; api:sparqlEndpoint <http://orcamento.dados.gov.br/sparql/>
+        ; api:defaultViewer api:labelledDescribeViewer
+        ; api:defaultFormatter loa-i:HtmlFormatter
+        ; api:base "http://orcamento.dados.gov.br"
+        ; api:vocabulary <http://vocab.e.gov.br/2012/08/loa2012.owl>
+        ; api:endpoint
+            spec:lista_acao , spec:item_acao ,
+            spec:lista_elemento-despesa , spec:item_elemento-despesa ,
+            spec:lista_acao_atividade ,
+            spec:lista_acao_operacao-especial ,
+            spec:lista_acao_projeto ,
+            spec:lista_categoria-economica , spec:item_categoria-economica ,
+            spec:lista_esfera , spec:item_esfera
+        .
+
+    
+# ENDPOINTS	
+
+spec:lista_acao
+    a api:ListEndpoint ;
+    rdfs:label "Ações Orçamentárias do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/acao" ;
+    api:selector spec:seletor_acao .
+
+spec:lista_acao_atividade
+    a api:ListEndpoint ;
+    rdfs:label "Atividades do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/acao/atividade" ;
+    api:selector [
+      api:parent spec:seletor_acao ;
+      api:filter "type=Atividade" ;
+      api:sort "label"
+    ] .
+
+spec:lista_acao_operacao-especial
+    a api:ListEndpoint ;
+    rdfs:label "Operações Especiais do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/acao/operacao-especial" ;
+    api:selector [
+      api:parent spec:seletor_acao ;
+      api:filter "type=OperacaoEspecial" ;
+      api:sort "label"
+    ] .
+
+spec:lista_acao_projeto
+    a api:ListEndpoint ;
+    rdfs:label "Projetos do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/acao/projeto" ;
+    api:selector [
+      api:parent spec:seletor_acao ;
+      api:filter "type=Projeto" ;
+      api:sort "label"
+    ] .
+
+#Descreve uma acao
+spec:item_acao
+    a api:ItemEndpoint ;
+    rdfs:label "Ação"@pt ;
+    api:uriTemplate "/doc/acao/{codigo}" ;
+    api:itemTemplate "http://orcamento.dados.gov.br/id/acao/{codigo}" .
+
+spec:lista_elemento-despesa
+    a api:ListEndpoint ;
+    rdfs:label "Elementos de despesa do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/elemento-despesa" ;
+    api:selector [
+      a api:Selector ;
+      api:filter "type=ElementoDespesa" ;
+      api:sort "label"
+    ] .
+
+#Descreve um elemento de despesa
+spec:item_elemento-despesa
+    a api:ItemEndpoint ;
+    rdfs:label "Elemento de despesa"@pt ;
+    api:uriTemplate "/doc/elemento-despesa/{codigo}" ;
+    api:itemTemplate "http://orcamento.dados.gov.br/id/elemento-despesa/{codigo}" .
+
+spec:lista_categoria-economica
+    a api:ListEndpoint ;
+    rdfs:label "Categorias econômicas do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/categoria-economica" ;
+    api:selector [
+      a api:Selector ;
+      api:filter "type=CategoriaEconomica" ;
+      api:sort "label"
+    ] .
+
+#Descreve uma categoria econômica
+spec:item_categoria-economica
+    a api:ItemEndpoint ;
+    rdfs:label "Categoria econômica"@pt ;
+    api:uriTemplate "/doc/categoria-economica/{codigo}" ;
+    api:itemTemplate "http://orcamento.dados.gov.br/id/categoria-economica/{codigo}" .
+
+spec:lista_esfera
+    a api:ListEndpoint ;
+    rdfs:label "Esferas orçamentárias do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/esfera" ;
+    api:selector [
+      a api:Selector ;
+      api:filter "type=Esfera" ;
+      api:sort "label"
+    ] .
+
+#Descreve uma esfera orçamentária
+spec:item_esfera
+    a api:ItemEndpoint ;
+    rdfs:label "Esfera orçamentária"@pt ;
+    api:uriTemplate "/doc/esfera/{codigo}" ;
+    api:itemTemplate "http://orcamento.dados.gov.br/id/esfera/{codigo}" .
+
+# This XSLT formatter produces rich HTML from the viewer properties.
+#
+
+loa-i:HtmlFormatter a api:XsltFormatter 
+	; api:name "html" 
+	; api:mimeType "text/html; charset=utf-8" 
+	; api:stylesheet "lda-assets/xslt/result.xsl"
+	.
+
+#loa:codigo a rdf:Property ;
+#    api:label "código na LOA"@pt ;
+#    rdfs:range xsd:string .
+
