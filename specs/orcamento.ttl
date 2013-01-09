@@ -41,8 +41,22 @@ spec:seletor_acao
 
 spec:viewerShort
     a api:Viewer ;
-    api:name "short" ;
+    api:name "curto" ;
     api:properties "label,loa_codigo" .
+
+spec:viewerItemDeDespesaResumido
+    a api:Viewer ;  
+    api:name "resumido" ;
+    #api:properties "label,temAcao.label,temElementoDespesa.label,temEsfera.label,temFonteRecursos.label,temFuncao.label,temIndicadorUso.label,temLocalizador.label,temModalidadeAplicacao.label,temPrograma.label,temResultadoPrimario.label,temSubfuncao.label,temUnidadeOrcamentaria.label,valorDotacaoInicial" .
+    api:properties "label,temAcao.label,temElementoDespesa.label,temEsfera.label,temLocalizador.label" . #,temModalidadeAplicacao.label,temPrograma.label,temResultadoPrimario.label,temSubfuncao.label,temUnidadeOrcamentaria.label,valorDotacaoInicial" .
+
+
+
+spec:viewerItemDeDespesaCompleto
+    a api:Viewer ;
+    api:name "detalhado" ;
+    api:properties "label,temAcao.label" .
+#"label,loa:temAcao.label,loa:temAtividade.label,loa:temElementoDespesa.label,loa:temEsfera.label,loa:temFonteRecursos.label,loa:temFuncao.label,loa:temGnd.label,loa:temIndicadorUso.label,loa:temLocalizador.label,loa:temModalidadeAplicacao.label,loa:temPrograma.label,loa:temResultadoPrimario.label,loa:temSubfuncao.label,loa:temUnidadeOrcamentaria.label,loa:valorDotacaoInicial" .
 
 ############################################################################################
 #
@@ -64,7 +78,19 @@ spec:api a api:API
             spec:lista_acao_operacao-especial ,
             spec:lista_acao_projeto ,
             spec:lista_categoria-economica , spec:item_categoria-economica ,
-            spec:lista_esfera , spec:item_esfera
+            spec:lista_esfera , spec:item_esfera ,
+	    spec:lista_fonte-recursos , spec:item_fonte-recursos ,
+	    spec:lista_funcao , spec:item_funcao ,
+	    spec:lista_gnd , spec:item_gnd ,
+	    spec:lista_indicador-uso , spec:item_indicador-uso ,
+	    spec:lista_item-de-despesa , spec:item_item-de-despesa ,
+	    spec:lista_localizador , spec:item_localizador ,
+	    spec:lista_modalidade-aplicacao , spec:item_modalidade-aplicacao ,
+	    spec:lista_orgao , spec:item_orgao ,
+	    spec:lista_programa , spec:item_programa ,
+	    spec:lista_resultado-primario , spec:item_resultado-primario ,
+	    spec:lista_subfuncao , spec:item_subfuncao ,
+	    spec:lista_unidade-orcamentaria , spec:item_unidade-orcamentaria
         .
 
     
@@ -163,6 +189,215 @@ spec:item_esfera
     rdfs:label "Esfera orçamentária"@pt ;
     api:uriTemplate "/doc/esfera/{codigo}" ;
     api:itemTemplate "http://orcamento.dados.gov.br/id/esfera/{codigo}" .
+
+spec:lista_fonte-recursos
+    a api:ListEndpoint ;
+    rdfs:label "Fontes de recursos do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/fonte-recursos" ;
+    api:selector [
+      a api:Selector ;
+      api:filter "type=FonteRecursos" ;
+      api:sort "label"
+    ] .
+
+#Descreve uma fonte de recursos
+spec:item_fonte-recursos
+    a api:ItemEndpoint ;
+    rdfs:label "Fonte de recursos"@pt ;
+    api:uriTemplate "/doc/fonte-recursos/{codigo}" ;
+    api:itemTemplate "http://orcamento.dados.gov.br/id/fonte-recursos/{codigo}" .
+
+spec:lista_funcao
+    a api:ListEndpoint ;
+    rdfs:label "Funções do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/funcao" ;
+    api:selector [
+      a api:Selector ;
+      api:filter "type=Funcao" ;
+      api:sort "label"
+    ] .
+
+#Descreve uma função
+spec:item_funcao
+    a api:ItemEndpoint ;
+    rdfs:label "Função"@pt ;
+    api:uriTemplate "/doc/funcao/{codigo}" ;
+    api:itemTemplate "http://orcamento.dados.gov.br/id/funcao/{codigo}" .
+
+spec:lista_gnd
+    a api:ListEndpoint ;
+    rdfs:label "Grupo de Natureza de Despesa do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/gnd" ;
+    api:selector [
+      a api:Selector ;
+      api:filter "type=GrupoNatDespesa" ;
+      api:sort "label"
+    ] .
+
+#Descreve um grupo de natureza de despesa
+spec:item_gnd
+    a api:ItemEndpoint ;
+    rdfs:label "Grupo de Natureza de Despesa"@pt ;
+    api:uriTemplate "/doc/gnd/{codigo}" ;
+    api:itemTemplate "http://orcamento.dados.gov.br/id/gnd/{codigo}" .
+
+
+spec:lista_indicador-uso
+    a api:ListEndpoint ;
+    rdfs:label "Indicadores de uso do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/indicador-uso" ;
+    api:selector [
+      a api:Selector ;
+      api:filter "type=IndicadorUso" ;
+      api:sort "label"
+    ] .
+
+#Descreve um indicador de uso
+spec:item_indicador-uso
+    a api:ItemEndpoint ;
+    rdfs:label "Indicador de uso"@pt ;
+    api:uriTemplate "/doc/indicador-uso/{codigo}" ;
+    api:itemTemplate "http://orcamento.dados.gov.br/id/indicador-uso/{codigo}" .
+
+spec:lista_item-de-despesa
+    a api:ListEndpoint ;
+    rdfs:label "Item de despesa do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/item-de-despesa" ;
+    api:defaultViewer spec:viewerItemDeDespesaResumido ;
+    api:viewer spec:viewerItemDeDespesaCompleto ;
+    api:selector [
+      a api:Selector ;
+      api:filter "type=ItemDeDespesa" ;
+      api:sort "label"
+    ] .
+
+#Descreve um item de despesa
+spec:item_item-de-despesa
+    a api:ItemEndpoint ;
+    rdfs:label "Item de despesa"@pt ;
+    api:uriTemplate "/doc/item-de-despesa/{codigo}" ;
+    api:itemTemplate "http://orcamento.dados.gov.br/id/item-de-despesa/{codigo}" .
+
+
+spec:lista_localizador
+    a api:ListEndpoint ;
+    rdfs:label "Localizador do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/localizador" ;
+    api:selector [
+      a api:Selector ;
+      api:filter "type=Localizador" ;
+      api:sort "label"
+    ] .
+
+#Descreve um localizador
+spec:item_localizador
+    a api:ItemEndpoint ;
+    rdfs:label "Localizador"@pt ;
+    api:uriTemplate "/doc/localizador/{codigo}" ;
+    api:itemTemplate "http://orcamento.dados.gov.br/id/localizador/{codigo}" .
+
+spec:lista_modalidade-aplicacao
+    a api:ListEndpoint ;
+    rdfs:label "Modalidade de aplicação do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/modalidade-aplicacao" ;
+    api:selector [
+      a api:Selector ;
+      api:filter "type=ModalidadeAplicacao" ;
+      api:sort "label"
+    ] .
+
+#Descreve uma modalidade de aplicação
+spec:item_modalidade-aplicacao
+    a api:ItemEndpoint ;
+    rdfs:label "Modalidade de aplicação"@pt ;
+    api:uriTemplate "/doc/modalidade-aplicacao/{codigo}" ;
+    api:itemTemplate "http://orcamento.dados.gov.br/id/modalidade-aplicacao/{codigo}" .
+
+spec:lista_orgao
+    a api:ListEndpoint ;
+    rdfs:label "Órgão do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/orgao" ;
+    api:selector [
+      a api:Selector ;
+      api:filter "type=Orgao" ;
+      api:sort "label"
+    ] .
+
+#Descreve um órgão
+spec:item_orgao
+    a api:ItemEndpoint ;
+    rdfs:label "Órgão"@pt ;
+    api:uriTemplate "/doc/orgao/{codigo}" ;
+    api:itemTemplate "http://orcamento.dados.gov.br/id/orgao/{codigo}" .
+
+spec:lista_programa
+    a api:ListEndpoint ;
+    rdfs:label "Programa do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/programa" ;
+    api:selector [
+      a api:Selector ;
+      api:filter "type=Programa" ;
+      api:sort "label"
+    ] .
+
+#Descreve um programa
+spec:item_programa
+    a api:ItemEndpoint ;
+    rdfs:label "Programa"@pt ;
+    api:uriTemplate "/doc/programa/{codigo}" ;
+    api:itemTemplate "http://orcamento.dados.gov.br/id/programa/{codigo}" .
+
+spec:lista_resultado-primario
+    a api:ListEndpoint ;
+    rdfs:label "Resultado Primário do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/resultado-primario" ;
+    api:selector [
+      a api:Selector ;
+      api:filter "type=ResultadoPrimario" ;
+      api:sort "label"
+    ] .
+
+#Descreve um resultado primário
+spec:item_resultado-primario
+    a api:ItemEndpoint ;
+    rdfs:label "Resultado Primário"@pt ;
+    api:uriTemplate "/doc/resultado-primario/{codigo}" ;
+    api:itemTemplate "http://orcamento.dados.gov.br/id/resultado-primario/{codigo}" .
+
+spec:lista_subfuncao
+    a api:ListEndpoint ;
+    rdfs:label "Subfunção do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/subfuncao" ;
+    api:selector [
+      a api:Selector ;
+      api:filter "type=Subfuncao" ;
+      api:sort "label"
+    ] .
+
+#Descreve uma subfunção
+spec:item_subfuncao
+    a api:ItemEndpoint ;
+    rdfs:label "Subfunção"@pt ;
+    api:uriTemplate "/doc/subfuncao/{codigo}" ;
+    api:itemTemplate "http://orcamento.dados.gov.br/id/subfuncao/{codigo}" .
+
+spec:lista_unidade-orcamentaria
+    a api:ListEndpoint ;
+    rdfs:label "Unidade Orçamentária do Orçamento 2012"@pt ;
+    api:uriTemplate "/doc/unidade-orcamentaria" ;
+    api:selector [
+      a api:Selector ;
+      api:filter "type=UnidadeOrcamentaria" ;
+      api:sort "label"
+    ] .
+
+#Descreve uma Unidade Orçamentária
+spec:item_unidade-orcamentaria
+    a api:ItemEndpoint ;
+    rdfs:label "Unidade Orçamentária"@pt ;
+    api:uriTemplate "/doc/unidade-orcamentaria/{codigo}" ;
+    api:itemTemplate "http://orcamento.dados.gov.br/id/unidade-orcamentaria/{codigo}" .
+
 
 # This XSLT formatter produces rich HTML from the viewer properties.
 #
