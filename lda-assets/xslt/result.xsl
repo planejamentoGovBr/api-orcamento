@@ -633,14 +633,14 @@ $prefLabel, $altLabel, $title and $name variables.
 						<xsl:text>Podem haver outros itens que correspondem à sua consulta mas que não estão sendo mostrados neste mapa.</xsl:text>
 						<xsl:if test="$searchMap">
 							<xsl:text> Se você quiser pesquisar em uma área diferente, mova para aquela área e clique no </xsl:text>
-							<img src="{$activeImageBase}/Search.png" alt="search" />
+							<img src="{$activeImageBase}/Search.png" alt="buscar" />
 							<xsl:text> ícone.</xsl:text>
 						</xsl:if>
 					</xsl:with-param>
 				</xsl:call-template>
 				<xsl:if test="$searchMap">
 					<p class="search">
-						<img src="{$activeImageBase}/Search.png" alt="search" />
+						<img src="{$activeImageBase}/Search.png" alt="buscar" />
 					</p>
 				</xsl:if>
 				<div class="mapWrapper">
@@ -1053,7 +1053,7 @@ $prefLabel, $altLabel, $title and $name variables.
 		<section class="filter">
 			<h1>Filter</h1>
 			<xsl:call-template name="createInfo">
-				<xsl:with-param name="text">Estes são os filtros atualmente utilizados para limitar os resultados da pesquisa. Clique no <img src="{$activeImageBase}/Back.png" alt="remove filter" /> ícone para remover o filtro.</xsl:with-param>
+				<xsl:with-param name="text">Estes são os filtros atualmente utilizados para limitar os resultados da pesquisa. Clique no <img src="{$activeImageBase}/Back.png" alt="remover filtros" /> ícone para remover o filtro.</xsl:with-param>
 			</xsl:call-template>
 			<table>
 				<xsl:copy-of select="$filters" />
@@ -1096,7 +1096,7 @@ $prefLabel, $altLabel, $title and $name variables.
 									</xsl:with-param>
 								</xsl:call-template>
 							</xsl:attribute>
-							<img src="{$activeImageBase}/Back.png" alt="remove filter" />
+							<img src="{$activeImageBase}/Back.png" alt="remover filtros" />
 						</a>
 					</td>
 				</xsl:when>
@@ -1130,7 +1130,7 @@ $prefLabel, $altLabel, $title and $name variables.
 									<xsl:with-param name="value" select="''" />
 								</xsl:call-template>
 							</xsl:attribute>
-							<img src="{$activeImageBase}/Back.png" alt="remove filter" />
+							<img src="{$activeImageBase}/Back.png" alt="remover filtros" />
 						</a>
 					</td>
 				</xsl:otherwise>
@@ -1173,9 +1173,9 @@ $prefLabel, $altLabel, $title and $name variables.
 				<xsl:text>Escolha as informações que deseja ver sobre cada item. </xsl:text>
 				<xsl:text>Existem algumas visões pré-definidas, mas as propriedades favoritas estão sempre presentes, não importa qual a visão. </xsl:text> 
 				<xsl:text>Você pode marcar propriedades como favoritas clicando no ícone </xsl:text>
-				<img src="{$inactiveImageBase}/Star.png" alt="star this property" />
+				<img src="{$inactiveImageBase}/Star.png" alt="marcar esta propriedade como favorita" />
 				<xsl:text> . AS propriedades atualmente marcadas como favoritas têm um ícone </xsl:text>
-				<img src="{$activeImageBase}/Star.png" alt="unstar this property" />
+				<img src="{$activeImageBase}/Star.png" alt="desmarcar esta propriedade como favorita" />
 				<xsl:text> ; clicando nele vai desmarcar a propriedade como favorita.</xsl:text>
 			</xsl:with-param>
 		</xsl:call-template>
@@ -1189,7 +1189,7 @@ $prefLabel, $altLabel, $title and $name variables.
 							<xsl:with-param name="value" select="''" />
 						</xsl:call-template>
 					</xsl:attribute>
-					<img src="{$activeImageBase}/Back.png" alt="reset" />
+					<img src="{$activeImageBase}/Back.png" alt="reiniciar" />
 				</a>
 			</p>
 		</xsl:if>
@@ -1354,7 +1354,7 @@ $prefLabel, $altLabel, $title and $name variables.
 						</xsl:with-param> 
 					</xsl:call-template>
 				</xsl:attribute>
-				<img src="{$inactiveImageBase}/Star.png" alt="star this property" />
+				<img src="{$inactiveImageBase}/Star.png" alt="marcar esta propriedade como favorita" />
 				<xsl:text> </xsl:text>
 				<xsl:apply-templates select="." mode="contextLabel" />
 			</a>
@@ -1451,25 +1451,25 @@ $prefLabel, $altLabel, $title and $name variables.
 		<xsl:call-template name="createInfo">
 			<xsl:with-param name="text">
 				<xsl:text>Esta lista mostra as propriedades com as quais você pode classificar. Clique em </xsl:text>
-				<img src="{$inactiveImageBase}/Arrow3_Up.png" alt="sort in ascending order" />
+				<img src="{$inactiveImageBase}/Arrow3_Up.png" alt="ordenar ascendentemente" />
 				<xsl:text> para reordenar em ordem ascendente e </xsl:text>
-				<img src="{$inactiveImageBase}/Arrow3_Down.png" alt="sort in descending order" />
+				<img src="{$inactiveImageBase}/Arrow3_Down.png" alt="ordenar descendentemente" />
 				<xsl:text> para reordenar em ordem decrescente. As propriedades com as quais você está ordenando atualmente são mostradas no topo da lista. Clique em </xsl:text>
-				<img src="{$activeImageBase}/Cancel.png" alt="remove this sort" />
+				<img src="{$activeImageBase}/Cancel.png" alt="remover esta ordenação" />
 				<xsl:text> para remover uma ordenação e </xsl:text>
-				<img src="{$activeImageBase}/Arrow3_Up.png" alt="sort in descending order" />
+				<img src="{$activeImageBase}/Arrow3_Up.png" alt="ordenar descendentemente" />
 				<xsl:text> ou </xsl:text>
-				<img src="{$activeImageBase}/Arrow3_Down.png" alt="sort in ascending order" />
+				<img src="{$activeImageBase}/Arrow3_Down.png" alt="ordenar ascendentemente" />
 				<xsl:text> para inverter a ordenação atual. </xsl:text>
 				<xsl:text>Clique no ícone </xsl:text>
-				<img src="{$activeImageBase}/Back.png" alt="remove all sorting" />
+				<img src="{$activeImageBase}/Back.png" alt="remover todas as ordenações" />
 				<xsl:text> para remover todas ordenações. </xsl:text>
 				<xsl:text>Note que ordenar pode reduzir significativamente a velocidade de carregamento da página.</xsl:text>
 			</xsl:with-param>
 		</xsl:call-template>
 		<xsl:if test="$current != ''">
 			<p class="reset">
-				<a title="remove sorting">
+				<a title="remover ordenação">
 					<xsl:attribute name="href">
 						<xsl:call-template name="substituteParam">
 							<xsl:with-param name="uri" select="$baseURI" />
@@ -1477,7 +1477,7 @@ $prefLabel, $altLabel, $title and $name variables.
 							<xsl:with-param name="value" select="''" />
 						</xsl:call-template>
 					</xsl:attribute>
-					<img src="{$activeImageBase}/Back.png" alt="reset" />
+					<img src="{$activeImageBase}/Back.png" alt="reiniciar" />
 				</a>
 			</p>
 		</xsl:if>
@@ -1492,7 +1492,7 @@ $prefLabel, $altLabel, $title and $name variables.
 					</xsl:variable>
 					<li class="selected">
 						<a rel="nofollow" title="remove this sort" href="{$baseURI}">
-							<img src="{$activeImageBase}/Cancel.png" alt="remove this sort" />
+							<img src="{$activeImageBase}/Cancel.png" alt="remover esta ordenação" />
 						</a>
 						<xsl:choose>
 							<!-- this is the _orderBy that's used to sort by proximity to center of the map -->
@@ -1505,7 +1505,7 @@ $prefLabel, $altLabel, $title and $name variables.
 											<xsl:with-param name="value" select="substring-after($orderBy, 'desc')" />
 										</xsl:call-template>
 									</xsl:attribute>
-									<img src="{$activeImageBase}/Arrow3_Down.png" alt="sort in ascending order" />
+									<img src="{$activeImageBase}/Arrow3_Down.png" alt="ordenar ascendentemente" />
 								</a>
 								<xsl:value-of select="$description" />
 							</xsl:when>
@@ -1518,12 +1518,12 @@ $prefLabel, $altLabel, $title and $name variables.
 											<xsl:with-param name="value" select="concat('desc', substring-after($orderBy, 'asc'))" />
 										</xsl:call-template>
 									</xsl:attribute>
-									<img src="{$activeImageBase}/Arrow3_Up.png" alt="sort in descending order" />
+									<img src="{$activeImageBase}/Arrow3_Up.png" alt="ordenar descendentemente" />
 								</a>
 								<xsl:value-of select="$description" />
 							</xsl:when>
 							<xsl:otherwise>
-								<a rel="nofollow" title="sort in descending order">
+								<a rel="nofollow" title="ordenar descendentemente">
 									<xsl:attribute name="href">
 										<xsl:call-template name="substituteParam">
 											<xsl:with-param name="uri" select="$baseURI" />
@@ -1531,7 +1531,7 @@ $prefLabel, $altLabel, $title and $name variables.
 											<xsl:with-param name="value" select="concat('desc', $orderBy)" />
 										</xsl:call-template>
 									</xsl:attribute>
-									<img src="{$activeImageBase}/Arrow3_Up.png" alt="sort in descending order" />
+									<img src="{$activeImageBase}/Arrow3_Up.png" alt="ordenar descendentemente" />
 								</a>
 								<xsl:value-of select="$description" />
 							</xsl:otherwise>
@@ -1603,7 +1603,7 @@ $prefLabel, $altLabel, $title and $name variables.
 					</xsl:with-param> 
 				</xsl:call-template>
 			</xsl:attribute>
-			<img src="{$activeImageBase}/Cancel.png" alt="remove this sort" />
+			<img src="{$activeImageBase}/Cancel.png" alt="remover esta ordenação" />
 		</a>
 		<a rel="nofollow">
 			<xsl:attribute name="href">
@@ -1628,16 +1628,16 @@ $prefLabel, $altLabel, $title and $name variables.
 			</xsl:attribute>
 			<xsl:attribute name="title">
 				<xsl:choose>
-					<xsl:when test="starts-with($sort, '-')">sort in ascending order</xsl:when>
-					<xsl:otherwise>sort in descending order</xsl:otherwise>
+					<xsl:when test="starts-with($sort, '-')">ordenar ascendentemente</xsl:when>
+					<xsl:otherwise>ordenar descendentemente</xsl:otherwise>
 				</xsl:choose>
 			</xsl:attribute>
 			<xsl:choose>
 				<xsl:when test="starts-with($sort, '-')">
-					<img src="{$activeImageBase}/Arrow3_Down.png" alt="sort in ascending order" />
+					<img src="{$activeImageBase}/Arrow3_Down.png" alt="ordenar ascendentemente" />
 				</xsl:when>
 				<xsl:otherwise>
-					<img src="{$activeImageBase}/Arrow3_Up.png" alt="sort in descending order" />
+					<img src="{$activeImageBase}/Arrow3_Up.png" alt="ordenar descendentemente" />
 				</xsl:otherwise>
 			</xsl:choose>
 		</a>
@@ -1729,8 +1729,8 @@ $prefLabel, $altLabel, $title and $name variables.
 			</xsl:call-template>
 		</xsl:variable>
 		<li>
-			<a rel="nofollow" href="{$ascending}" title="sort in ascending order">
-				<img src="{$inactiveImageBase}/Arrow3_Up.png" alt="sort in ascending order" />
+			<a rel="nofollow" href="{$ascending}" title="ordenar ascendentemente">
+				<img src="{$inactiveImageBase}/Arrow3_Up.png" alt="ordenar ascendentemente" />
 			</a>
 			<a rel="nofollow" title="sort in descending order">
 				<xsl:attribute name="href">
@@ -1747,10 +1747,10 @@ $prefLabel, $altLabel, $title and $name variables.
 						</xsl:with-param>
 					</xsl:call-template>
 				</xsl:attribute>
-				<img src="{$inactiveImageBase}/Arrow3_Down.png" alt="sort in descending order" />
+				<img src="{$inactiveImageBase}/Arrow3_Down.png" alt="ordenar descendentemente" />
 			</a>
 			<xsl:text> </xsl:text>
-			<a rel="nofollow" href="{$ascending}" title="sort in ascending order">
+			<a rel="nofollow" href="{$ascending}" title="ordenar ascendentemente">
 				<xsl:apply-templates select="." mode="contextLabel" />
 			</a>
 		</li>
@@ -1834,7 +1834,7 @@ $prefLabel, $altLabel, $title and $name variables.
 	<xsl:variable name="name">
 		<xsl:apply-templates select="." mode="name" />
 	</xsl:variable>
-	<a href="{@href}" type="{format/label}" rel="alternate" title="view in {$name} format">
+	<a href="{@href}" type="{format/label}" rel="alternate" title="ver em formato {$name}">
 		<xsl:value-of select="label" />
 	</a>
 </xsl:template>
@@ -1856,7 +1856,7 @@ $prefLabel, $altLabel, $title and $name variables.
 			</span>
 		</xsl:when>
 		<xsl:otherwise>
-			<a href="{@href}" title="switch to {$label} view">
+			<a href="{@href}" title="alterar para visualização {$label}">
 				<xsl:value-of select="$label" />
 			</a>
 		</xsl:otherwise>
@@ -2158,7 +2158,7 @@ $prefLabel, $altLabel, $title and $name variables.
 <xsl:template name="createInfo">
 	<xsl:param name="text" />
 	<div class="info">
-		<img class="open" src="{$activeImageBase}/Question.png" alt="help" />
+		<img class="open" src="{$activeImageBase}/Question.png" alt="ajuda" />
 		<p><xsl:copy-of select="$text" /></p>
 	</div>
 </xsl:template>
@@ -2467,7 +2467,7 @@ $prefLabel, $altLabel, $title and $name variables.
 				</xsl:call-template>
 			</xsl:variable>
 			<a rel="nofollow" title="remove this property" href="{$href}">
-				<img src="{$activeImageBase}/Star.png" alt="unstar this property" />
+				<img src="{$activeImageBase}/Star.png" alt="desmarcar esta propriedade como favorita" />
 			</a>
 		</xsl:when>
 		<xsl:otherwise>
@@ -2485,7 +2485,7 @@ $prefLabel, $altLabel, $title and $name variables.
 						</xsl:with-param>
 					</xsl:call-template>
 				</xsl:attribute>
-				<img src="{$inactiveImageBase}/Star.png" alt="star this property" />
+				<img src="{$inactiveImageBase}/Star.png" alt="marcar esta propriedade como favorita" />
 			</a>
 		</xsl:otherwise>
 	</xsl:choose>
@@ -2528,7 +2528,7 @@ $prefLabel, $altLabel, $title and $name variables.
 						<xsl:with-param name="value" select="''" />
 					</xsl:call-template>
 				</xsl:attribute>
-				<img src="{$activeImageBase}/Back.png" alt="remove filter" />
+				<img src="{$activeImageBase}/Back.png" alt="remover filtro" />
 			</a>
 		</xsl:when>
 		<xsl:when test="$datatype = 'integer' or $datatype = 'decimal' or $datatype = 'float' or $datatype = 'int' or $datatype = 'date' or $datatype = 'dateTime' or $datatype = 'time'">
@@ -2550,7 +2550,7 @@ $prefLabel, $altLabel, $title and $name variables.
 			</xsl:variable>
 			<xsl:choose>
 				<xsl:when test="$max = $value">
-					<a rel="nofollow" title="remove maximum value filter">
+					<a rel="nofollow" title="remover filtro de valor máximo">
 						<xsl:attribute name="href">
 							<xsl:call-template name="substituteParam">
 								<xsl:with-param name="uri">
@@ -2560,11 +2560,11 @@ $prefLabel, $altLabel, $title and $name variables.
 								<xsl:with-param name="value" select="''" />
 							</xsl:call-template>
 						</xsl:attribute>
-						<img src="{$activeImageBase}/Back.png" alt="remove maximum value filter" />
+						<img src="{$activeImageBase}/Back.png" alt="remover filtro de valor máximo" />
 					</a>
 				</xsl:when>
 				<xsl:otherwise>
-					<a rel="nofollow" title="filter to values less than {$value}">
+					<a rel="nofollow" title="filtrar por valores menores que {$value}">
 						<xsl:attribute name="href">
 							<xsl:call-template name="substituteParam">
 								<xsl:with-param name="uri">
@@ -2576,16 +2576,16 @@ $prefLabel, $altLabel, $title and $name variables.
 						</xsl:attribute>
 						<xsl:choose>
 							<xsl:when test="$max != ''">
-								<img src="{$activeImageBase}/Arrow3_Left.png" alt="less than {$value}" />
+								<img src="{$activeImageBase}/Arrow3_Left.png" alt="menor que {$value}" />
 							</xsl:when>
 							<xsl:otherwise>
-								<img src="{$inactiveImageBase}/Arrow3_Left.png" alt="less than {$value}" />
+								<img src="{$inactiveImageBase}/Arrow3_Left.png" alt="menor que {$value}" />
 							</xsl:otherwise>
 						</xsl:choose>
 					</a>
 				</xsl:otherwise>
 			</xsl:choose>
-			<a rel="nofollow" title="more like this">
+			<a rel="nofollow" title="filtrar por este valor">
 				<xsl:attribute name="href">
 					<xsl:call-template name="substituteParam">
 						<xsl:with-param name="uri">
@@ -2595,11 +2595,11 @@ $prefLabel, $altLabel, $title and $name variables.
 						<xsl:with-param name="value" select="$value" />
 					</xsl:call-template>
 				</xsl:attribute>
-				<img src="{$inactiveImageBase}/Search.png" alt="more like this" />
+				<img src="{$inactiveImageBase}/Search.png" alt="filtrar por este valor" />
 			</a>
 			<xsl:choose>
 				<xsl:when test="$min = $value">
-					<a rel="nofollow" title="remove minimum value filter">
+					<a rel="nofollow" title="remover filtro de valor mínimo">
 						<xsl:attribute name="href">
 							<xsl:call-template name="substituteParam">
 								<xsl:with-param name="uri">
@@ -2609,11 +2609,11 @@ $prefLabel, $altLabel, $title and $name variables.
 								<xsl:with-param name="value" select="''" />
 							</xsl:call-template>
 						</xsl:attribute>
-						<img src="{$activeImageBase}/Back.png" alt="remove minimum value filter" />
+						<img src="{$activeImageBase}/Back.png" alt="remover filtro de valor mínimo" />
 					</a>
 				</xsl:when>
 				<xsl:otherwise>
-					<a rel="nofollow" title="more than {$value}">
+					<a rel="nofollow" title="maior que {$value}">
 						<xsl:attribute name="href">
 							<xsl:call-template name="substituteParam">
 								<xsl:with-param name="uri">
@@ -2625,10 +2625,10 @@ $prefLabel, $altLabel, $title and $name variables.
 						</xsl:attribute>
 						<xsl:choose>
 							<xsl:when test="$min != ''">
-								<img src="{$activeImageBase}/Arrow3_Right.png" alt="more than {$value}" />
+								<img src="{$activeImageBase}/Arrow3_Right.png" alt="maior que {$value}" />
 							</xsl:when>
 							<xsl:otherwise>
-								<img src="{$inactiveImageBase}/Arrow3_Right.png" alt="more than {$value}" />
+								<img src="{$inactiveImageBase}/Arrow3_Right.png" alt="maior que {$value}" />
 							</xsl:otherwise>
 						</xsl:choose>
 					</a>
@@ -2636,7 +2636,7 @@ $prefLabel, $altLabel, $title and $name variables.
 			</xsl:choose>
 		</xsl:when>
 		<xsl:otherwise>
-			<a rel="nofollow" title="more like this">
+			<a rel="nofollow" title="filtrar por este valor">
 				<xsl:attribute name="href">
 					<xsl:call-template name="substituteParam">
 						<xsl:with-param name="uri">
@@ -2646,7 +2646,7 @@ $prefLabel, $altLabel, $title and $name variables.
 						<xsl:with-param name="value" select="$label" />
 					</xsl:call-template>
 				</xsl:attribute>
-				<img src="{$inactiveImageBase}/Search.png" alt="more like this" />
+				<img src="{$inactiveImageBase}/Search.png" alt="filtrar por este valor" />
 			</a>
 		</xsl:otherwise>
 	</xsl:choose>
@@ -2661,7 +2661,7 @@ $prefLabel, $altLabel, $title and $name variables.
 			</xsl:variable>
 			<xsl:choose>
 				<xsl:when test="$highestDescription != generate-id(.)">
-					<a href="#{$highestDescription}" title="view on this page">
+					<a href="#{$highestDescription}" title="visualizar nesta página">
 						<xsl:copy-of select="$content" />
 					</a>
 				</xsl:when>
@@ -2686,12 +2686,12 @@ $prefLabel, $altLabel, $title and $name variables.
 							</a>
 						</xsl:when>
 						<xsl:otherwise>
-							<a href="{$adjustedHref}" title="view on this site">
+							<a href="{$adjustedHref}" title="visualizar neste sítio">
 								<xsl:copy-of select="$content" />
 							</a>
 							<xsl:if test="$adjustedHref != @href">
 								<xsl:text> </xsl:text>
-								<a href="{@href}" title="view original" class="outlink">original</a>
+								<a href="{@href}" title="visualizar original" class="outlink">original</a>
 							</xsl:if>
 						</xsl:otherwise>
 					</xsl:choose>
