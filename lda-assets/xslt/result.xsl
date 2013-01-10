@@ -626,7 +626,7 @@ $prefLabel, $altLabel, $title and $name variables.
 			<xsl:variable name="searchMap" 
 				select="//*[*[name(.) = $easting] and *[name(.) = $northing]]" />
 			<section class="map">
-				<h1>Map</h1>
+				<h1>Mapa</h1>
 				<xsl:call-template name="createInfo">
 					<xsl:with-param name="text">
 						<xsl:text>Este mapa mostra os itens que estão listados nesta página. </xsl:text>
@@ -742,7 +742,7 @@ $prefLabel, $altLabel, $title and $name variables.
 	</xsl:variable>
 	<xsl:if test="$rows != ''">
 		<section class="graphs">
-			<h1>Graphs</h1>
+			<h1>Gráficos</h1>
 			<xsl:call-template name="createInfo">
 				<xsl:with-param name="text">Estes gráficos sumarizam os valores das propriedades numéricas desses itens.</xsl:with-param>
 			</xsl:call-template>
@@ -945,7 +945,7 @@ $prefLabel, $altLabel, $title and $name variables.
 <xsl:template match="result" mode="summary">
 	<xsl:if test="count(items/item) > 1">
 		<section class="summary">
-			<h1>On This Page</h1>
+			<h1>Nesta Página</h1>
 			<xsl:call-template name="createInfo">
 				<xsl:with-param name="text">Links para os itens desta página, e para as páginas de resultados anteriores e/ou seguintes.</xsl:with-param>
 			</xsl:call-template>
@@ -978,7 +978,7 @@ $prefLabel, $altLabel, $title and $name variables.
 	</xsl:variable>
 	<xsl:if test="string($links) != ''">
 		<section class="moreinfo">
-			<h1>Browse</h1>
+			<h1>Navegar</h1>
 			<xsl:call-template name="createInfo">
 				<xsl:with-param name="text">Links para mais informações.</xsl:with-param>
 			</xsl:call-template>
@@ -1051,7 +1051,7 @@ $prefLabel, $altLabel, $title and $name variables.
 	</xsl:variable>
 	<xsl:if test="$filters != ''">
 		<section class="filter">
-			<h1>Filter</h1>
+			<h1>Filtro</h1>
 			<xsl:call-template name="createInfo">
 				<xsl:with-param name="text">Estes são os filtros atualmente utilizados para limitar os resultados da pesquisa. Clique no <img src="{$activeImageBase}/Back.png" alt="remover filtros" /> ícone para remover o filtro.</xsl:with-param>
 			</xsl:call-template>
@@ -1167,7 +1167,7 @@ $prefLabel, $altLabel, $title and $name variables.
 		</xsl:call-template>
 	</xsl:variable>
 	<section class="view">
-		<h1>View</h1>
+		<h1>Visualizar</h1>
 		<xsl:call-template name="createInfo">
 			<xsl:with-param name="text">
 				<xsl:text>Escolha as informações que deseja ver sobre cada item. </xsl:text>
@@ -1364,7 +1364,7 @@ $prefLabel, $altLabel, $title and $name variables.
 
 <xsl:template match="result" mode="sizenav">
 	<section class="size">
-		<h1>Items per page</h1>
+		<h1>Itens por página</h1>
 		<xsl:call-template name="createInfo">
 			<xsl:with-param name="text">Escolha quantos itens visualizar em cada página. Quanto mais iten, mais tempo a página vai demorar para carregar.</xsl:with-param>
 		</xsl:call-template>
@@ -1865,7 +1865,7 @@ $prefLabel, $altLabel, $title and $name variables.
 
 <xsl:template match="/result/primaryTopic" mode="content" priority="10">
 	<header>
-		<p id="openSearch">Show Search Form</p>
+		<p id="openSearch">Exibir Formulário de Busca</p>
 		<h1><xsl:apply-templates select="." mode="name" /></h1>
 		<p class="id"><a href="{@href}"><xsl:value-of select="@href" /></a></p>
 	</header>
