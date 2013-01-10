@@ -51,7 +51,7 @@ $prefLabel, $altLabel, $title and $name variables.
 </xsl:template>
 
 <xsl:template match="result" mode="title">
-	<title>Search Results</title>
+	<title>Resultados da Busca</title>
 </xsl:template>
 
 <xsl:template match="result" mode="meta">
@@ -123,10 +123,10 @@ $prefLabel, $altLabel, $title and $name variables.
 			
 			$('#openSearch')
 				.toggle(function () {
-					$(this).text('Hide Search Form');
+					$(this).text('Esconder Formulário de Busca');
 					$('#search').slideDown('slow');
 				}, function () {
-					$(this).text('Show Search Form');
+					$(this).text('Exibir Formulário de Busca');
 					$('#search').slideUp('slow');
 				});
 			
@@ -319,11 +319,11 @@ $prefLabel, $altLabel, $title and $name variables.
 	<footer>
 		<xsl:apply-templates select="wasResultOf" mode="footer" />
 		<p>
-			<xsl:text>Powered by </xsl:text>
+			<xsl:text>Impulsionado por </xsl:text>
 			<xsl:apply-templates select="wasResultOf/processor" mode="footer" />
-			<xsl:text>an implementation of the </xsl:text>
-			<a href="http://code.google.com/p/linked-data-api">Linked Data API</a><br />
-			<a href="http://www.axialis.com/free/icons">Icons</a> by <a href="http://www.axialis.com">Axialis Team</a>
+			<xsl:text>uma implementação da </xsl:text>
+			<a href="http://code.google.com/p/linked-data-api">API de Dados Ligados</a><br />
+			<a href="http://www.axialis.com/free/icons">Ícones</a> por <a href="http://www.axialis.com">Time da Axialis</a>
 		</p>
 	</footer>
 </xsl:template>
@@ -349,8 +349,8 @@ $prefLabel, $altLabel, $title and $name variables.
         </xsl:attribute>
 		<h2>
 			<xsl:choose>
-				<xsl:when test="self::viewingResult">Viewer</xsl:when>
-				<xsl:otherwise>Selection</xsl:otherwise>
+				<xsl:when test="self::viewingResult">Visualizador</xsl:when>
+				<xsl:otherwise>Seleção</xsl:otherwise>
 			</xsl:choose>
 		</h2>
 		<!-- Added config supplied parameter 'visibleSparqlEndpoint' to give public sparql endpoint in case local connections are being used for API -->
@@ -371,26 +371,26 @@ $prefLabel, $altLabel, $title and $name variables.
 			</xsl:choose>
 		</xsl:variable>
 		<p>
-			<xsl:text>This is the SPARQL query that was generated to </xsl:text>
+			<xsl:text>Esta é a consulta SPARQL que foi gerada para </xsl:text>
 			<xsl:choose>
 				<xsl:when test="self::viewingResult">
-					<xsl:text>pull together the data that is provided about</xsl:text>
+					<xsl:text>juntar os dados que serão fornecidos sobre</xsl:text>
 					<xsl:choose>
-						<xsl:when test="/result/items"> each item.</xsl:when>
-						<xsl:otherwise> the selected item.</xsl:otherwise>
+						<xsl:when test="/result/items"> cada item.</xsl:when>
+						<xsl:otherwise> o item selecionado.</xsl:otherwise>
 					</xsl:choose>
 				</xsl:when>
-				<xsl:otherwise>identify the items to be shown in the page.</xsl:otherwise>
+				<xsl:otherwise>identificar os itens a serem exibidos na página.</xsl:otherwise>
 			</xsl:choose>
 			
-			<xsl:text> You can modify it here and re-run the query but you may find more options at the </xsl:text>
-			<a href="{$formToUse}">endpoint's page</a>
+			<xsl:text> Você pode modificá-la aqui e refazer a consulta, mas você pode encontrar mais opções na </xsl:text>
+			<a href="{$formToUse}">página do terminal</a>
 			<xsl:text>.</xsl:text>
 		</p>
 		<form action="{$endPointToUse}" method="post">
 			<xsl:apply-templates select="query" mode="footer" />
 			<p>
-				<button type="submit">Run Query</button>
+				<button type="submit">Rodas Consulta</button>
 			</p>
 		</form>
 	</div>
@@ -496,9 +496,9 @@ $prefLabel, $altLabel, $title and $name variables.
 				<xsl:when test="items">
 					<header>
 						<xsl:if test="items/item">
-							<p id="openSearch">Show Search Form</p>
+							<p id="openSearch">Exibir Formulário de Busca</p>
 						</xsl:if>
-						<h1>Search Results</h1>
+						<h1>Resultados da Busca</h1>
 					</header>
 					<xsl:if test="items/item">
 						<xsl:apply-templates select="." mode="search" />
@@ -629,12 +629,12 @@ $prefLabel, $altLabel, $title and $name variables.
 				<h1>Map</h1>
 				<xsl:call-template name="createInfo">
 					<xsl:with-param name="text">
-						<xsl:text>This map shows the items that are listed on this page. </xsl:text>
-						<xsl:text>There might be other items that match your query that aren't shown on this map.</xsl:text>
+						<xsl:text>Este mapa mostra os itens que estão listados nesta página. </xsl:text>
+						<xsl:text>Podem haver outros itens que correspondem à sua consulta mas que não estão sendo mostrados neste mapa.</xsl:text>
 						<xsl:if test="$searchMap">
-							<xsl:text> If you want to search in a different area, move to that area and click the </xsl:text>
+							<xsl:text> Se você quiser pesquisar em uma área diferente, mova para aquela área e clique no </xsl:text>
 							<img src="{$activeImageBase}/Search.png" alt="search" />
-							<xsl:text> icon.</xsl:text>
+							<xsl:text> ícone.</xsl:text>
 						</xsl:if>
 					</xsl:with-param>
 				</xsl:call-template>
@@ -744,7 +744,7 @@ $prefLabel, $altLabel, $title and $name variables.
 		<section class="graphs">
 			<h1>Graphs</h1>
 			<xsl:call-template name="createInfo">
-				<xsl:with-param name="text">These graphs summarise the values of the numeric properties of these items.</xsl:with-param>
+				<xsl:with-param name="text">Estes gráficos sumarizam os valores das propriedades numéricas desses itens.</xsl:with-param>
 			</xsl:call-template>
 			<table>
 				<xsl:copy-of select="$rows" />
@@ -947,7 +947,7 @@ $prefLabel, $altLabel, $title and $name variables.
 		<section class="summary">
 			<h1>On This Page</h1>
 			<xsl:call-template name="createInfo">
-				<xsl:with-param name="text">Links to the items within this page, and to the previous and/or next pages of results.</xsl:with-param>
+				<xsl:with-param name="text">Links para os itens desta página, e para as páginas de resultados anteriores e/ou seguintes.</xsl:with-param>
 			</xsl:call-template>
 			<ul>
 				<xsl:if test="prev">
@@ -980,7 +980,7 @@ $prefLabel, $altLabel, $title and $name variables.
 		<section class="moreinfo">
 			<h1>Browse</h1>
 			<xsl:call-template name="createInfo">
-				<xsl:with-param name="text">Links to further information.</xsl:with-param>
+				<xsl:with-param name="text">Links para mais informações.</xsl:with-param>
 			</xsl:call-template>
 			<xsl:copy-of select="$links" />
 		</section>
@@ -1053,7 +1053,7 @@ $prefLabel, $altLabel, $title and $name variables.
 		<section class="filter">
 			<h1>Filter</h1>
 			<xsl:call-template name="createInfo">
-				<xsl:with-param name="text">These are the filters currently being used to limit the search results. Click on the <img src="{$activeImageBase}/Back.png" alt="remove filter" /> icon to remove the filter.</xsl:with-param>
+				<xsl:with-param name="text">Estes são os filtros atualmente utilizados para limitar os resultados da pesquisa. Clique no <img src="{$activeImageBase}/Back.png" alt="remove filter" /> ícone para remover o filtro.</xsl:with-param>
 			</xsl:call-template>
 			<table>
 				<xsl:copy-of select="$filters" />
@@ -1170,13 +1170,13 @@ $prefLabel, $altLabel, $title and $name variables.
 		<h1>View</h1>
 		<xsl:call-template name="createInfo">
 			<xsl:with-param name="text">
-				<xsl:text>Choose what information you want to view about each item. </xsl:text>
-				<xsl:text>There are some pre-defined views, but starred properties are always present no matter what the view. </xsl:text> 
-				<xsl:text>You can star properties by clicking on the </xsl:text>
+				<xsl:text>Escolha as informações que deseja ver sobre cada item. </xsl:text>
+				<xsl:text>Existem algumas visões pré-definidas, mas as propriedades favoritas estão sempre presentes, não importa qual a visão. </xsl:text> 
+				<xsl:text>Você pode marcar propriedades como favoritas clicando no ícone </xsl:text>
 				<img src="{$inactiveImageBase}/Star.png" alt="star this property" />
-				<xsl:text> icon. The currently starred icons have a </xsl:text>
+				<xsl:text> . AS propriedades atualmente marcadas como favoritas têm um ícone </xsl:text>
 				<img src="{$activeImageBase}/Star.png" alt="unstar this property" />
-				<xsl:text> icon; clicking on it will unstar the property.</xsl:text>
+				<xsl:text> ; clicando nele vai desmarcar a propriedade como favorita.</xsl:text>
 			</xsl:with-param>
 		</xsl:call-template>
 		<xsl:if test="$properties != ''">
@@ -1264,7 +1264,7 @@ $prefLabel, $altLabel, $title and $name variables.
 					</xsl:with-param> 
 				</xsl:call-template>
 			</xsl:attribute>
-			<img src="{$activeImageBase}/Star.png" alt="unstar this property" />
+			<img src="{$activeImageBase}/Star.png" alt="desmarcar esta propriedade como favorita" />
 		</a>
 		<xsl:text> </xsl:text>
 		<xsl:choose>
@@ -1340,7 +1340,7 @@ $prefLabel, $altLabel, $title and $name variables.
 	</xsl:variable>
 	<xsl:if test="not(contains(concat(',', $properties, ','), concat(',', $name, ',')))">
 		<li>
-			<a rel="nofollow" title="always include this property">
+			<a rel="nofollow" title="sempre incluir esta propriedade">
 				<xsl:attribute name="href">
 					<xsl:call-template name="substituteParam">
 						<xsl:with-param name="uri" select="/result/@href" />
@@ -1366,7 +1366,7 @@ $prefLabel, $altLabel, $title and $name variables.
 	<section class="size">
 		<h1>Items per page</h1>
 		<xsl:call-template name="createInfo">
-			<xsl:with-param name="text">Choose how many items to view on each page. The more items you view, the longer the page will take to load.</xsl:with-param>
+			<xsl:with-param name="text">Escolha quantos itens visualizar em cada página. Quanto mais iten, mais tempo a página vai demorar para carregar.</xsl:with-param>
 		</xsl:call-template>
 		<ul>
 			<li>
@@ -1398,7 +1398,7 @@ $prefLabel, $altLabel, $title and $name variables.
 			</span>
 		</xsl:when>
 		<xsl:otherwise>
-			<a rel="nofollow" title="view {$size} items per page">
+			<a rel="nofollow" title="visualizar {$size} itens por páginas">
 				<xsl:attribute name="href">
 					<xsl:call-template name="substituteParam">
 						<xsl:with-param name="uri">
@@ -1447,24 +1447,24 @@ $prefLabel, $altLabel, $title and $name variables.
 		</xsl:call-template>
 	</xsl:variable>
 	<section class="sort">
-		<h1>Sort by</h1>
+		<h1>Ordenar por</h1>
 		<xsl:call-template name="createInfo">
 			<xsl:with-param name="text">
-				<xsl:text>This list shows the properties that you can sort by. Click on </xsl:text>
+				<xsl:text>Esta lista mostra as propriedades com as quais você pode classificar. Clique em </xsl:text>
 				<img src="{$inactiveImageBase}/Arrow3_Up.png" alt="sort in ascending order" />
-				<xsl:text> to sort in ascending order and </xsl:text>
+				<xsl:text> para reordenar em ordem ascendente e </xsl:text>
 				<img src="{$inactiveImageBase}/Arrow3_Down.png" alt="sort in descending order" />
-				<xsl:text> to sort in descending order. The properties that you're currently sorting by are shown at the top of the list. Click on </xsl:text>
+				<xsl:text> para reordenar em ordem decrescente. As propriedades com as quais você está ordenando atualmente são mostradas no topo da lista. Clique em </xsl:text>
 				<img src="{$activeImageBase}/Cancel.png" alt="remove this sort" />
-				<xsl:text> to remove a sort and </xsl:text>
+				<xsl:text> para remover uma ordenação e </xsl:text>
 				<img src="{$activeImageBase}/Arrow3_Up.png" alt="sort in descending order" />
-				<xsl:text> or </xsl:text>
+				<xsl:text> ou </xsl:text>
 				<img src="{$activeImageBase}/Arrow3_Down.png" alt="sort in ascending order" />
-				<xsl:text> to reverse the current sort order. </xsl:text>
-				<xsl:text>Click on the </xsl:text>
+				<xsl:text> para inverter a ordenação atual. </xsl:text>
+				<xsl:text>Clique no ícone </xsl:text>
 				<img src="{$activeImageBase}/Back.png" alt="remove all sorting" />
-				<xsl:text> icon to remove all the sorting. </xsl:text>
-				<xsl:text>Note that sorting can significantly slow down the loading of the page.</xsl:text>
+				<xsl:text> para remover todas ordenações. </xsl:text>
+				<xsl:text>Note que ordenar pode reduzir significativamente a velocidade de carregamento da página.</xsl:text>
 			</xsl:with-param>
 		</xsl:call-template>
 		<xsl:if test="$current != ''">
