@@ -56,7 +56,7 @@ spec:viewerItemDeDespesaResumido
 spec:viewerItemDeDespesaCompleto
     a api:Viewer ;
     api:name "detalhado" ;
-    api:properties "label,loa:temAcao.label,loa:temAtividade.label,loa:temElementoDespesa.label,loa:temEsfera.label,loa:temFonteRecursos.label,loa:temFuncao.label,loa:temGND.label,loa:temIndicadorUso.label,loa:temLocalizador.label,loa:temModalidadeAplicacao.label,loa:temPrograma.label,loa:temResultadoPrimario.label,loa:temSubfuncao.label,loa:temUnidadeOrcamentaria.label,loa:valorDotacaoInicial" .
+    api:properties "label,temAcao.label,temAtividade.label,temElementoDespesa.label,temEsfera.label,temFonteRecursos.label,temFuncao.label,temGND.label,temIndicadorUso.label,temLocalizador.label,temModalidadeAplicacao.label,temPrograma.label,temResultadoPrimario.label,temSubfuncao.label,temUnidadeOrcamentaria.label,valorDotacaoInicial" .
 
 ############################################################################################
 #
