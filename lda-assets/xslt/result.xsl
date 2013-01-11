@@ -390,7 +390,7 @@ $prefLabel, $altLabel, $title and $name variables.
 		<form action="{$endPointToUse}" method="post">
 			<xsl:apply-templates select="query" mode="footer" />
 			<p>
-				<button type="submit">Rodas Consulta</button>
+				<button type="submit">Rodar Consulta</button>
 			</p>
 		</form>
 	</div>
@@ -957,7 +957,7 @@ $prefLabel, $altLabel, $title and $name variables.
 				</xsl:if>
 				<xsl:for-each select="items/item">
 					<li>
-						<a href="#{generate-id(.)}" title="jump to item on this page">
+						<a href="#{generate-id(.)}" title="pular para item nesta página">
 							<xsl:apply-templates select="." mode="name" />
 						</a>
 					</li>
@@ -1510,7 +1510,7 @@ $prefLabel, $altLabel, $title and $name variables.
 								<xsl:value-of select="$description" />
 							</xsl:when>
 							<xsl:when test="starts-with($orderBy, 'asc')">
-								<a rel="nofollow" title="sort in descending order">
+								<a rel="nofollow" title="ordenar descendentemente">
 									<xsl:attribute name="href">
 										<xsl:call-template name="substituteParam">
 											<xsl:with-param name="uri" select="$baseURI" />
@@ -2746,7 +2746,7 @@ $prefLabel, $altLabel, $title and $name variables.
 					</xsl:for-each>
 				</table>
 				<p>
-					<button type="submit">Search</button>
+					<button type="submit">Buscar</button>
 				</p>
 			</form>
 		</xsl:if>
