@@ -952,7 +952,7 @@ $prefLabel, $altLabel, $title and $name variables.
 			<ul>
 				<xsl:if test="prev">
 					<li>
-						<xsl:apply-templates select="anterior" mode="nav" />
+						<xsl:apply-templates select="prev" mode="nav" />
 					</li>
 				</xsl:if>
 				<xsl:for-each select="items/item">
@@ -1802,13 +1802,13 @@ $prefLabel, $altLabel, $title and $name variables.
 </xsl:template>
 
 <xsl:template match="result" mode="pagenav">
-	<xsl:if test="anterior or next">
+	<xsl:if test="prev or next">
 		<section class="page">
 			<ul>
-				<xsl:for-each select="first | anterior | next | last">
+				<xsl:for-each select="first | prev | next | last">
 					<xsl:sort select="boolean(self::last)" />
 					<xsl:sort select="boolean(self::next)" />
-					<xsl:sort select="boolean(self::anterior)" />
+					<xsl:sort select="boolean(self::prev)" />
 					<li><xsl:apply-templates select="." mode="nav" /></li>
 				</xsl:for-each>
 			</ul>
@@ -1816,18 +1816,28 @@ $prefLabel, $altLabel, $title and $name variables.
 	</xsl:if>
 </xsl:template>
 
-<xsl:template match="first | anterior | next | last" mode="nav">
-	<a href="{@href}" title="pular para a página {name()}">
+<xsl:template match="first | prev | next | last" mode="nav">
+	<a href="{@href}" title="ir para a {name()} página">
 		<xsl:choose>
-			<xsl:when test="self::first">« </xsl:when>
-			<xsl:when test="self::anterior">‹ </xsl:when>
+			<xsl:when test="self::first">
+				<a href="{@href}" title="ir para a primeira página">
+				« primeira </a>
+			</xsl:when>
+			<xsl:when test="self::prev">
+				<a href="{@href}" title="ir para a página anterior">
+				‹ anterior </a>
+			</xsl:when>
 		</xsl:choose>
-		<xsl:value-of select="name()" />
 		<xsl:choose>
-			<xsl:when test="self::next"> ›</xsl:when>
-			<xsl:when test="self::last"> »</xsl:when>
+			<xsl:when test="self::next">
+				<a href="{@href}" title="ir para a próxima página">
+				 próxima ›</a>
+			</xsl:when>
+			<xsl:when test="self::last">
+				<a href="{@href}" title="ir para a última página">
+				 última »</a>
+			</xsl:when>
 		</xsl:choose>
-	</a>
 </xsl:template>
 
 <xsl:template match="format/item" mode="nav">
