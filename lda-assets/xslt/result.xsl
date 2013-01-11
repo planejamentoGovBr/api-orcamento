@@ -1088,7 +1088,7 @@ $prefLabel, $altLabel, $title and $name variables.
 				<xsl:when test="$paramName = concat('min-', $easting)">
 					<th class="label" colspan="2">area of map</th>
 					<td class="filter">
-						<a title="remove filter">
+						<a title="remover filtro">
 							<xsl:attribute name="href">
 								<xsl:call-template name="clearPosition">
 									<xsl:with-param name="uri">
@@ -1120,7 +1120,7 @@ $prefLabel, $altLabel, $title and $name variables.
 						</xsl:call-template>
 					</td>
 					<td class="filter">
-						<a title="remove filter">
+						<a title="remover filtro">
 							<xsl:attribute name="href">
 								<xsl:call-template name="substituteParam">
 									<xsl:with-param name="uri">
@@ -2527,7 +2527,7 @@ $prefLabel, $altLabel, $title and $name variables.
 		<xsl:when test="$value = ''" />
 		<xsl:when test="$hasNonLabelProperties = 'true' and $hasNoLabelProperties = 'true'" />
 		<xsl:when test="$paramValue = $value">
-			<a rel="nofollow" title="remove filter">
+			<a rel="nofollow" title="remover filtro">
 				<xsl:attribute name="href">
 					<xsl:call-template name="substituteParam">
 						<xsl:with-param name="uri">

@@ -68,7 +68,9 @@ spec:viewerItemDeDespesaCompleto
 spec:api a api:API                           
         ; rdfs:label "Linked Data API do Orçamento"@pt
         ; api:sparqlEndpoint <http://orcamento.dados.gov.br/sparql/>
-        ; api:defaultViewer api:labelledDescribeViewer
+	; api:maxPageSize 50
+	; api:defaultPageSize 10
+	; api:defaultViewer api:labelledDescribeViewer
         ; api:defaultFormatter loa-i:HtmlFormatter
         ; api:base "http://orcamento.dados.gov.br"
         ; api:vocabulary <http://vocab.e.gov.br/2012/08/loa2012.owl>
