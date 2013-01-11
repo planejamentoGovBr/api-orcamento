@@ -453,3 +453,46 @@ loa:temResultadoPrimario rdfs:label "resultadoPrimario"@pt .
 loa:temSubfuncao rdfs:label "subfuncao"@pt .
 
 loa:temUnidadeOrcamentaria rdfs:label "unidadeOrcamentaria"@pt .
+
+loa:Acao rdfs:label "Ação"@pt .
+
+loa:Atividade rdfs:label "Atividade"@pt .
+
+loa:CategoriaEconomica rdfs:label "Categoria Econômica"@pt .
+
+loa:Classificador rdfs:label "Classificador"@pt .
+
+loa:ItemDeDespesa rdfs:label "Item de Despesa"@pt .
+
+loa:ElementoDespesa rdfs:label "Elemento de Despesa"@pt .
+
+loa:Esfera rdfs:label "Esfera"@pt .
+
+loa:FonteRecursos rdfs:label "Fonte de Recursos"@pt .
+
+loa:Funcao rdfs:label "Função"@pt .
+
+loa:GrupoNatDespesa rdfs:label "Grupo de Natureza de Despesa"@pt .
+
+loa:IndicadorUso rdfs:label "Indicador de Uso"@pt .
+
+loa:Localizador rdfs:label "Localizador"@pt .
+
+loa:ModalidadeAplicacao rdfs:label "Modalidade de Aplicação"@pt .
+
+loa:OperacaoEspecial rdfs:label "Operação Especial"@pt .
+
+loa:Orgao rdfs:label "Orgão"@pt .
+
+loa:Programa rdfs:label "Programa"@pt .
+
+loa:Projeto rdfs:label "Projeto"@pt .
+
+loa:ResultadoPrimario rdfs:label "Resultado Primário"@pt .
+
+loa:Subfuncao rdfs:label "Subfunção"@pt .
+
+loa:UnidadeOrcamentaria rdfs:label "Unidade Orçamentária"@pt .
+
+loa:Orgao rdfs:label "Orgão"@pt .
+
