@@ -1732,7 +1732,7 @@ $prefLabel, $altLabel, $title and $name variables.
 			<a rel="nofollow" href="{$ascending}" title="ordenar ascendentemente">
 				<img src="{$inactiveImageBase}/Arrow3_Up.png" alt="ordenar ascendentemente" />
 			</a>
-			<a rel="nofollow" title="sort in descending order">
+			<a rel="nofollow" title="ordenar descendentemente">
 				<xsl:attribute name="href">
 					<xsl:call-template name="substituteParam">
 						<xsl:with-param name="uri" select="$uri" />
