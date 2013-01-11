@@ -50,14 +50,14 @@ spec:viewerShort
 spec:viewerItemDeDespesaResumido
     a api:Viewer ;  
     api:name "resumido" ;
-    api:properties "label,temAcao.label,temElementoDespesa.label,temEsfera.label,temLocalizador.label,temGnd.label,temUnidadeOrcamentaria.label,valorDotacaoInicial" .
+    api:properties "label,temAcao.label,temElementoDespesa.label,temEsfera.label,temLocalizador.label,temGND.label,temUnidadeOrcamentaria.label,valorDotacaoInicial" .
 
 
 spec:viewerItemDeDespesaCompleto
     a api:Viewer ;
     api:name "detalhado" ;
     api:properties "label,temAcao.label" .
-#"label,loa:temAcao.label,loa:temAtividade.label,loa:temElementoDespesa.label,loa:temEsfera.label,loa:temFonteRecursos.label,loa:temFuncao.label,loa:temGnd.label,loa:temIndicadorUso.label,loa:temLocalizador.label,loa:temModalidadeAplicacao.label,loa:temPrograma.label,loa:temResultadoPrimario.label,loa:temSubfuncao.label,loa:temUnidadeOrcamentaria.label,loa:valorDotacaoInicial" .
+#"label,loa:temAcao.label,loa:temAtividade.label,loa:temElementoDespesa.label,loa:temEsfera.label,loa:temFonteRecursos.label,loa:temFuncao.label,loa:temGND.label,loa:temIndicadorUso.label,loa:temLocalizador.label,loa:temModalidadeAplicacao.label,loa:temPrograma.label,loa:temResultadoPrimario.label,loa:temSubfuncao.label,loa:temUnidadeOrcamentaria.label,loa:valorDotacaoInicial" .
 
 ############################################################################################
 #
@@ -423,6 +423,8 @@ loa:valorDotacaoInicial rdfs:label "valorDotacaoInicial"@pt .
 
 loa:temAcao rdfs:label "Acao"@pt .
 
+loa:temAtividade rdfs:label "atividade"@pt .
+
 loa:temCategoriaEconomica rdfs:label "categoriaEconomica"@pt .
 
 loa:temClassificador rdfs:label "classificador"@pt .
@@ -435,7 +437,7 @@ loa:temFonteRecursos rdfs:label "fonteRecursos"@pt .
 
 loa:temFuncao rdfs:label "funcao"@pt .
 
-loa:temGnd rdfs:label "grupoDeNaturezaDeDespesa"@pt .
+loa:temGND rdfs:label "grupoDeNaturezaDeDespesa"@pt .
 
 loa:temIndicadorUso rdfs:label "indicadorDeUso"@pt .
 
