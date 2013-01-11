@@ -1817,7 +1817,6 @@ $prefLabel, $altLabel, $title and $name variables.
 </xsl:template>
 
 <xsl:template match="first | prev | next | last" mode="nav">
-	<a href="{@href}" title="ir para a {name()} página">
 		<xsl:choose>
 			<xsl:when test="self::first">
 				<a href="{@href}" title="ir para a primeira página">
