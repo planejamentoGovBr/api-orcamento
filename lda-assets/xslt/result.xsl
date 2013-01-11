@@ -964,7 +964,7 @@ $prefLabel, $altLabel, $title and $name variables.
 				</xsl:for-each>
 				<xsl:if test="next">
 					<li>
-						<xsl:apply-templates select="próxima" mode="nav" />
+						<xsl:apply-templates select="next" mode="nav" />
 					</li>
 				</xsl:if>
 			</ul>
@@ -1802,10 +1802,10 @@ $prefLabel, $altLabel, $title and $name variables.
 </xsl:template>
 
 <xsl:template match="result" mode="pagenav">
-	<xsl:if test="prev or next">
+	<xsl:if test="anterior or next">
 		<section class="page">
 			<ul>
-				<xsl:for-each select="first | prev | next | last">
+				<xsl:for-each select="first | anterior | next | last">
 					<xsl:sort select="boolean(self::last)" />
 					<xsl:sort select="boolean(self::next)" />
 					<xsl:sort select="boolean(self::prev)" />
@@ -1816,7 +1816,7 @@ $prefLabel, $altLabel, $title and $name variables.
 	</xsl:if>
 </xsl:template>
 
-<xsl:template match="first | anterior | próxima | last" mode="nav">
+<xsl:template match="first | prev | next | last" mode="nav">
 	<a href="{@href}" title="pular para a página {name()}">
 		<xsl:choose>
 			<xsl:when test="self::first">« </xsl:when>
