@@ -1808,7 +1808,7 @@ $prefLabel, $altLabel, $title and $name variables.
 				<xsl:for-each select="first | anterior | next | last">
 					<xsl:sort select="boolean(self::last)" />
 					<xsl:sort select="boolean(self::next)" />
-					<xsl:sort select="boolean(self::prev)" />
+					<xsl:sort select="boolean(self::anterior)" />
 					<li><xsl:apply-templates select="." mode="nav" /></li>
 				</xsl:for-each>
 			</ul>
@@ -1820,7 +1820,7 @@ $prefLabel, $altLabel, $title and $name variables.
 	<a href="{@href}" title="pular para a página {name()}">
 		<xsl:choose>
 			<xsl:when test="self::first">« </xsl:when>
-			<xsl:when test="self::prev">‹ </xsl:when>
+			<xsl:when test="self::anterior">‹ </xsl:when>
 		</xsl:choose>
 		<xsl:value-of select="name()" />
 		<xsl:choose>
