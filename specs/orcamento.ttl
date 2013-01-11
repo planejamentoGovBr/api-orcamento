@@ -50,14 +50,13 @@ spec:viewerShort
 spec:viewerItemDeDespesaResumido
     a api:Viewer ;  
     api:name "resumido" ;
-    api:properties "label,temAcao.label,temElementoDespesa.label,temEsfera.label,temLocalizador.label,temGND.label,temUnidadeOrcamentaria.label,valorDotacaoInicial" .
+    api:properties "label,temAcao.label,temElementoDespesa.label,temEsfera.label,temLocalizador.label,temUnidadeOrcamentaria.label,valorDotacaoInicial" .
 
 
 spec:viewerItemDeDespesaCompleto
     a api:Viewer ;
     api:name "detalhado" ;
-    api:properties "label,temAcao.label" .
-#"label,loa:temAcao.label,loa:temAtividade.label,loa:temElementoDespesa.label,loa:temEsfera.label,loa:temFonteRecursos.label,loa:temFuncao.label,loa:temGND.label,loa:temIndicadorUso.label,loa:temLocalizador.label,loa:temModalidadeAplicacao.label,loa:temPrograma.label,loa:temResultadoPrimario.label,loa:temSubfuncao.label,loa:temUnidadeOrcamentaria.label,loa:valorDotacaoInicial" .
+    api:properties "label,loa:temAcao.label,loa:temAtividade.label,loa:temElementoDespesa.label,loa:temEsfera.label,loa:temFonteRecursos.label,loa:temFuncao.label,loa:temGND.label,loa:temIndicadorUso.label,loa:temLocalizador.label,loa:temModalidadeAplicacao.label,loa:temPrograma.label,loa:temResultadoPrimario.label,loa:temSubfuncao.label,loa:temUnidadeOrcamentaria.label,loa:valorDotacaoInicial" .
 
 ############################################################################################
 #
