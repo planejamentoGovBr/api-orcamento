@@ -50,7 +50,7 @@ spec:viewerShort
 spec:viewerItemDeDespesaResumido
     a api:Viewer ;  
     api:name "resumido" ;
-    api:properties "label,temAcao.label,temElementoDespesa.label,temEsfera.label,temLocalizador.label,temGND.label,temUnidadeOrcamentaria.label,valorDotacaoInicial" .
+    api:properties "label,temAcao.label,temElementoDespesa.label,temEsfera.label,temLocalizador.label,temGnd.label,temUnidadeOrcamentaria.label,valorDotacaoInicial" .
 
 
 spec:viewerItemDeDespesaCompleto
@@ -435,7 +435,7 @@ loa:temFonteRecursos rdfs:label "fonteRecursos"@pt .
 
 loa:temFuncao rdfs:label "funcao"@pt .
 
-loa:temGND rdfs:label "grupoDeNaturezaDeDespesa"@pt .
+loa:temGnd rdfs:label "grupoDeNaturezaDeDespesa"@pt .
 
 loa:temIndicadorUso rdfs:label "indicadorDeUso"@pt .
 
