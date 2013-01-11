@@ -1181,7 +1181,7 @@ $prefLabel, $altLabel, $title and $name variables.
 		</xsl:call-template>
 		<xsl:if test="$properties != ''">
 			<p class="reset">
-				<a title="unstar all properties">
+				<a title="desmarcar todas as propriedades como favoritas">
 					<xsl:attribute name="href">
 						<xsl:call-template name="substituteParam">
 							<xsl:with-param name="uri" select="/result/@href" />
