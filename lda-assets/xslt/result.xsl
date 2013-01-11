@@ -1250,7 +1250,7 @@ $prefLabel, $altLabel, $title and $name variables.
 		</xsl:call-template>
 	</xsl:variable>
 	<li class="selected">
-		<a rel="nofollow" title="remove this property">
+		<a rel="nofollow" title="remover esta propriedade">
 			<xsl:attribute name="href">
 				<xsl:call-template name="substituteParam">
 					<xsl:with-param name="uri" select="@href" />
@@ -1491,7 +1491,7 @@ $prefLabel, $altLabel, $title and $name variables.
 						</xsl:choose>
 					</xsl:variable>
 					<li class="selected">
-						<a rel="nofollow" title="remove this sort" href="{$baseURI}">
+						<a rel="nofollow" title="remover esta ordenação" href="{$baseURI}">
 							<img src="{$activeImageBase}/Cancel.png" alt="remover esta ordenação" />
 						</a>
 						<xsl:choose>
@@ -1589,7 +1589,7 @@ $prefLabel, $altLabel, $title and $name variables.
 		</xsl:call-template>
 	</xsl:variable>
 	<li class="selected">
-		<a rel="nofollow" title="remove this sort">
+		<a rel="nofollow" title="remover esta ordenação">
 			<xsl:attribute name="href">
 				<xsl:call-template name="substituteParam">
 					<xsl:with-param name="uri" select="$uri" />
@@ -2475,7 +2475,7 @@ $prefLabel, $altLabel, $title and $name variables.
 					</xsl:with-param>
 				</xsl:call-template>
 			</xsl:variable>
-			<a rel="nofollow" title="remove this property" href="{$href}">
+			<a rel="nofollow" title="remover esta propriedade" href="{$href}">
 				<img src="{$activeImageBase}/Star.png" alt="desmarcar esta propriedade como favorita" />
 			</a>
 		</xsl:when>
