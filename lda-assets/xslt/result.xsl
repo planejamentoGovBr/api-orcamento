@@ -952,7 +952,7 @@ $prefLabel, $altLabel, $title and $name variables.
 			<ul>
 				<xsl:if test="prev">
 					<li>
-						<xsl:apply-templates select="prev" mode="nav" />
+						<xsl:apply-templates select="anterior" mode="nav" />
 					</li>
 				</xsl:if>
 				<xsl:for-each select="items/item">
@@ -964,7 +964,7 @@ $prefLabel, $altLabel, $title and $name variables.
 				</xsl:for-each>
 				<xsl:if test="next">
 					<li>
-						<xsl:apply-templates select="next" mode="nav" />
+						<xsl:apply-templates select="próxima" mode="nav" />
 					</li>
 				</xsl:if>
 			</ul>
@@ -1817,7 +1817,7 @@ $prefLabel, $altLabel, $title and $name variables.
 </xsl:template>
 
 <xsl:template match="first | prev | next | last" mode="nav">
-	<a href="{@href}" title="go to {name()} page">
+	<a href="{@href}" title="pular para a página {name()}">
 		<xsl:choose>
 			<xsl:when test="self::first">« </xsl:when>
 			<xsl:when test="self::prev">‹ </xsl:when>
