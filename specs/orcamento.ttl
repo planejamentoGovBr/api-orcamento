@@ -411,7 +411,44 @@ loa-i:HtmlFormatter a api:XsltFormatter
 	; api:stylesheet "lda-assets/xslt/result.xsl"
 	.
 
-#loa:codigo a rdf:Property ;
-#    api:label "código na LOA"@pt ;
-#    rdfs:range xsd:string .
+############################################################################################
+#
+# API labels
+#
+############################################################################################
 
+loa:codigo rdfs:label "codigoLOA"@pt .
+
+loa:valorDotacaoInicial rdfs:label "valorDotacaoInicial"@pt .
+
+loa:temAcao rdfs:label "Acao"@pt .
+
+loa:temCategoriaEconomica rdfs:label "categoriaEconomica"@pt .
+
+loa:temClassificador rdfs:label "classificador"@pt .
+
+loa:temElementoDespesa rdfs:label "elementoDespesa"@pt .
+
+loa:temEsfera rdfs:label "esfera"@pt .
+
+loa:temFonteRecursos rdfs:label "fonteRecursos"@pt .
+
+loa:temFuncao rdfs:label "funcao"@pt .
+
+loa:temGND rdfs:label "grupoDeNaturezaDeDespesa"@pt .
+
+loa:temIndicadorUso rdfs:label "indicadorDeUso"@pt .
+
+loa:temLocalizador rdfs:label "localizador"@pt .
+
+loa:temModalidadeAplicacao rdfs:label "modalidadeDeAplicacao"@pt .
+
+loa:temOrgao rdfs:label "orgao"@pt .
+
+loa:temPrograma rdfs:label "programa"@pt .
+
+loa:temResultadoPrimario rdfs:label "resultadoPrimario"@pt .
+
+loa:temSubfuncao rdfs:label "subfuncao"@pt .
+
+loa:temUnidadeOrcamentaria rdfs:label "unidadeOrcamentaria"@pt .
