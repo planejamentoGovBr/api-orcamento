@@ -416,83 +416,84 @@ loa-i:HtmlFormatter a api:XsltFormatter
 #
 ############################################################################################
 
-loa:codigo rdfs:label "codigoLOA"@pt .
 
-loa:valorDotacaoInicial rdfs:label "valorDotacaoInicial"@pt .
+#loa:codigo rdfs:label "codigoLOA"@pt .
 
-loa:temAcao rdfs:label "Acao"@pt .
+#loa:valorDotacaoInicial rdfs:label "valorDotacaoInicial"@pt .loa:valorDotacaoInicial rdfs:label "valorDotacaoInicial"@pt .
 
-loa:temAtividade rdfs:label "atividade"@pt .
+#loa:temAcao rdfs:label "Acao"@pt .loa:temAcao rdfs:label "Acao"@pt .
 
-loa:temCategoriaEconomica rdfs:label "categoriaEconomica"@pt .
+#loa:temAtividade rdfs:label "atividade"@pt .loa:temAtividade rdfs:label "atividade"@pt .
 
-loa:temClassificador rdfs:label "classificador"@pt .
+#loa:temCategoriaEconomica rdfs:label "categoriaEconomica"@pt .loa:temCategoriaEconomica rdfs:label "categoriaEconomica"@pt .
 
-loa:temElementoDespesa rdfs:label "elementoDespesa"@pt .
+#loa:temClassificador rdfs:label "classificador"@pt .loa:temClassificador rdfs:label "classificador"@pt .
 
-loa:temEsfera rdfs:label "esfera"@pt .
+#loa:temElementoDespesa rdfs:label "elementoDespesa"@pt .loa:temElementoDespesa rdfs:label "elementoDespesa"@pt .
 
-loa:temFonteRecursos rdfs:label "fonteRecursos"@pt .
+#loa:temEsfera rdfs:label "esfera"@pt .loa:temEsfera rdfs:label "esfera"@pt .
 
-loa:temFuncao rdfs:label "funcao"@pt .
+#loa:temFonteRecursos rdfs:label "fonteRecursos"@pt .loa:temFonteRecursos rdfs:label "fonteRecursos"@pt .
 
-loa:temGND rdfs:label "grupoDeNaturezaDeDespesa"@pt .
+#loa:temFuncao rdfs:label "funcao"@pt .loa:temFuncao rdfs:label "funcao"@pt .
 
-loa:temIndicadorUso rdfs:label "indicadorDeUso"@pt .
+#loa:temGND rdfs:label "grupoDeNaturezaDeDespesa"@pt .loa:temGND rdfs:label "grupoDeNaturezaDeDespesa"@pt .
 
-loa:temLocalizador rdfs:label "localizador"@pt .
+#loa:temIndicadorUso rdfs:label "indicadorDeUso"@pt .loa:temIndicadorUso rdfs:label "indicadorDeUso"@pt .
 
-loa:temModalidadeAplicacao rdfs:label "modalidadeDeAplicacao"@pt .
+#loa:temLocalizador rdfs:label "localizador"@pt .loa:temLocalizador rdfs:label "localizador"@pt .
 
-loa:temOrgao rdfs:label "orgao"@pt .
+#loa:temModalidadeAplicacao rdfs:label "modalidadeDeAplicacao"@pt .loa:temModalidadeAplicacao rdfs:label "modalidadeDeAplicacao"@pt .
 
-loa:temPrograma rdfs:label "programa"@pt .
+#loa:temOrgao rdfs:label "orgao"@pt .loa:temOrgao rdfs:label "orgao"@pt .
 
-loa:temResultadoPrimario rdfs:label "resultadoPrimario"@pt .
+#loa:temPrograma rdfs:label "programa"@pt .loa:temPrograma rdfs:label "programa"@pt .
 
-loa:temSubfuncao rdfs:label "subfuncao"@pt .
+#loa:temResultadoPrimario rdfs:label "resultadoPrimario"@pt .loa:temResultadoPrimario rdfs:label "resultadoPrimario"@pt .
 
-loa:temUnidadeOrcamentaria rdfs:label "unidadeOrcamentaria"@pt .
+#loa:temSubfuncao rdfs:label "subfuncao"@pt .loa:temSubfuncao rdfs:label "subfuncao"@pt .
 
-loa:Acao rdfs:label "Ação"@pt .
+#loa:temUnidadeOrcamentaria rdfs:label "unidadeOrcamentaria"@pt .loa:temUnidadeOrcamentaria rdfs:label "unidadeOrcamentaria"@pt .
 
-loa:Atividade rdfs:label "Atividade"@pt .
+#loa:Acao rdfs:label "Ação"@pt .loa:Acao rdfs:label "Ação"@pt .
 
-loa:CategoriaEconomica rdfs:label "Categoria Econômica"@pt .
+#loa:Atividade rdfs:label "Atividade"@pt .loa:Atividade rdfs:label "Atividade"@pt .
 
-loa:Classificador rdfs:label "Classificador"@pt .
+#loa:CategoriaEconomica rdfs:label "Categoria Econômica"@pt .loa:CategoriaEconomica rdfs:label "Categoria Econômica"@pt .
 
-loa:ItemDeDespesa rdfs:label "Item de Despesa"@pt .
+#loa:Classificador rdfs:label "Classificador"@pt .loa:Classificador rdfs:label "Classificador"@pt .
 
-loa:ElementoDespesa rdfs:label "Elemento de Despesa"@pt .
+#loa:ItemDeDespesa rdfs:label "Item de Despesa"@pt .loa:ItemDeDespesa rdfs:label "Item de Despesa"@pt .
 
-loa:Esfera rdfs:label "Esfera"@pt .
+#loa:ElementoDespesa rdfs:label "Elemento de Despesa"@pt .loa:ElementoDespesa rdfs:label "Elemento de Despesa"@pt .
 
-loa:FonteRecursos rdfs:label "Fonte de Recursos"@pt .
+#loa:Esfera rdfs:label "Esfera"@pt .loa:Esfera rdfs:label "Esfera"@pt .
 
-loa:Funcao rdfs:label "Função"@pt .
+#loa:FonteRecursos rdfs:label "Fonte de Recursos"@pt .loa:FonteRecursos rdfs:label "Fonte de Recursos"@pt .
 
-loa:GrupoNatDespesa rdfs:label "Grupo de Natureza de Despesa"@pt .
+#loa:Funcao rdfs:label "Função"@pt .loa:Funcao rdfs:label "Função"@pt .
 
-loa:IndicadorUso rdfs:label "Indicador de Uso"@pt .
+#loa:GrupoNatDespesa rdfs:label "Grupo de Natureza de Despesa"@pt .loa:GrupoNatDespesa rdfs:label "Grupo de Natureza de Despesa"@pt .
 
-loa:Localizador rdfs:label "Localizador"@pt .
+#loa:IndicadorUso rdfs:label "Indicador de Uso"@pt .loa:IndicadorUso rdfs:label "Indicador de Uso"@pt .
 
-loa:ModalidadeAplicacao rdfs:label "Modalidade de Aplicação"@pt .
+#loa:Localizador rdfs:label "Localizador"@pt .loa:Localizador rdfs:label "Localizador"@pt .
 
-loa:OperacaoEspecial rdfs:label "Operação Especial"@pt .
+#loa:ModalidadeAplicacao rdfs:label "Modalidade de Aplicação"@pt .loa:ModalidadeAplicacao rdfs:label "Modalidade de Aplicação"@pt .
 
-loa:Orgao rdfs:label "Orgão"@pt .
+#loa:OperacaoEspecial rdfs:label "Operação Especial"@pt .loa:OperacaoEspecial rdfs:label "Operação Especial"@pt .
 
-loa:Programa rdfs:label "Programa"@pt .
+#loa:Orgao rdfs:label "Orgão"@pt .loa:Orgao rdfs:label "Orgão"@pt .
 
-loa:Projeto rdfs:label "Projeto"@pt .
+#loa:Programa rdfs:label "Programa"@pt .loa:Programa rdfs:label "Programa"@pt .
 
-loa:ResultadoPrimario rdfs:label "Resultado Primário"@pt .
+#loa:Projeto rdfs:label "Projeto"@pt .loa:Projeto rdfs:label "Projeto"@pt .
 
-loa:Subfuncao rdfs:label "Subfunção"@pt .
+#loa:ResultadoPrimario rdfs:label "Resultado Primário"@pt .loa:ResultadoPrimario rdfs:label "Resultado Primário"@pt .
 
-loa:UnidadeOrcamentaria rdfs:label "Unidade Orçamentária"@pt .
+#loa:Subfuncao rdfs:label "Subfunção"@pt .loa:Subfuncao rdfs:label "Subfunção"@pt .
 
-loa:Orgao rdfs:label "Orgão"@pt .
+#loa:UnidadeOrcamentaria rdfs:label "Unidade Orçamentária"@pt .loa:UnidadeOrcamentaria rdfs:label "Unidade Orçamentária"@pt .
+
+#loa:Orgao rdfs:label "Orgão"@pt .loa:Orgao rdfs:label "Orgão"@pt .
 
