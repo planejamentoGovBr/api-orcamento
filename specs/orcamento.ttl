@@ -50,7 +50,7 @@ spec:viewerShort
 spec:viewerItemDeDespesaResumido
     a api:Viewer ;  
     api:name "resumido" ;
-    api:properties "label,temAcao.label,temElementoDespesa.label,temEsfera.label,temLocalizador.label,temUnidadeOrcamentaria.label,valorDotacaoInicial,temFuncao.label" .    api:properties "label,temAcao.label,temElementoDespesa.label,temEsfera.label,temLocalizador.label,temUnidadeOrcamentaria.label,valorDotacaoInicial," .
+    api:properties "label,temAcao.label,temElementoDespesa.label,temEsfera.label,temLocalizador.label,temUnidadeOrcamentaria.label,valorDotacaoInicial,temFuncao.label" .
 
 
 spec:viewerItemDeDespesaCompleto
