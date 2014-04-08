@@ -20,7 +20,7 @@
 
 # Prefix for example-local entities.
 @prefix loa-i:	            <http://orcamento.dados.gov.br/elda/id/> .
-@prefix loa:                <http://vocab.e.gov.br/2012/08/loa2012#> .
+@prefix loa:                <http://vocab.e.gov.br/2013/09/loa#> .
 # ---------------------------------------------------------------------
 # API config
 
@@ -72,7 +72,7 @@ spec:api a api:API
 	; api:defaultViewer api:labelledDescribeViewer
         ; api:defaultFormatter loa-i:HtmlFormatter
         ; api:base "http://orcamento.dados.gov.br"
-        ; api:vocabulary <http://vocab.e.gov.br/2012/08/loa2012.owl>
+        ; api:vocabulary <http://vocab.e.gov.br/2013/09/loa.owl>
         ; api:endpoint
             spec:lista_acao , spec:item_acao ,
             spec:lista_elemento-despesa , spec:item_elemento-despesa ,
